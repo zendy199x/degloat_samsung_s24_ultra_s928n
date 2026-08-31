@@ -1,0 +1,253 @@
+{
+  "app_title": "GalaxyCare Debloater",
+  "app_subtitle": "Samsung Debloat & Optimize",
+  "status_title_checking": "Checking...",
+  "status_subtitle_checking_root": "Verifying root permission",
+  "status_subtitle_checking_usb": "Finding phone via USB",
+  "status_title_disconnected": "Phone Not Connected",
+  "status_subtitle_disconnected": "Connect USB cable and enable USB Debugging",
+  "status_title_unauthorized": "Device Unauthorized",
+  "status_subtitle_unauthorized": "Tap 'Allow' on your phone's screen",
+  "status_title_connected": "Connected {model}",
+  "@status_title_connected": {
+    "placeholders": {
+      "model": {
+        "type": "String"
+      }
+    }
+  },
+  "status_subtitle_connected": "ADB USB connection active",
+  "status_title_wrong_model": "Connected different model",
+  "status_title_wrong_model_detail": "Model: {model} (Requires Note, S, Z Fold, Z Flip)",
+  "@status_title_wrong_model_detail": {
+    "placeholders": {
+      "model": {
+        "type": "String"
+      }
+    }
+  },
+  "status_title_rooted": "Phone Rooted",
+  "status_subtitle_rooted": "Running locally | ROOT permission granted",
+  "status_title_no_root": "Device not ROOTED",
+  "status_subtitle_no_root": "Use a computer and USB cable to debloat",
+  "status_title_no_adb": "ADB Not Found",
+  "status_subtitle_no_adb": "Android SDK needs to be installed on computer",
+  "mode_label_root": "Mode: Running locally with ROOT shell",
+  "mode_label_adb": "Mode: Computer connected via ADB USB",
+  "mode_label_unsupported": "Mode: View Only (Commands not supported)",
+  "actions_header": "ACTIONS",
+  "btn_debloat": "DEBLOAT & OPTIMIZE",
+  "btn_verify": "Verify System Status",
+  "btn_dry_run": "Simulate (Dry Run)",
+  "btn_restore": "Restore All Deleted Apps",
+  "btn_stop": "Stop",
+  "btn_clear_logs": "Clear Logs",
+  "btn_copy_logs": "Copy Logs",
+  "warning_message_mobile": "Please run this app on a ROOTED phone, or run on a computer connected to the phone via USB.",
+  "warning_message_desktop": "Please connect Samsung Galaxy Note, S, Z Fold, Z Flip via USB with USB Debugging enabled.",
+  "tab_config": "Settings",
+  "tab_logs": "Logs",
+  "tab_app_list": "Presets",
+  "settings_title": "Settings",
+  "settings_system": "System",
+  "settings_dark_mode": "Dark Mode",
+  "settings_on": "On",
+  "settings_off": "Off",
+  "settings_language": "Language",
+  "settings_english": "English",
+  "settings_vietnamese": "Tiếng Việt",
+  "settings_advanced_options": "Advanced Options",
+  "settings_advanced_options_desc": "Show additional settings",
+  "settings_confirm_before_uninstall": "Confirm Before Uninstall",
+  "settings_auto_backup": "Auto Backup",
+  "settings_show_package_details": "Show Package Details",
+  "manual_filter_user": "User Apps",
+  "manual_select_all": "Select All ({count})",
+  "@manual_select_all": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "manual_no_device": "No device connected or apps loaded",
+  "manual_no_search": "No packages match search",
+  "manual_protected_tooltip": "Protected security/Knox package",
+  "manual_app_type_system": "SYSTEM",
+  "manual_app_type_user": "USER",
+  "console_header": "Activity Logs",
+  "console_empty_title": "No activity logs yet.",
+  "console_empty_subtitle": "Select an action on the left to start.",
+  "console_empty_subtitle_unsupported": "View the list of optimizable apps in the 'Presets' tab",
+  "app_list_title": "Optimizable Apps List",
+  "app_list_total": "Total: {count} apps",
+  "@app_list_total": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "app_list_group_suffix": "bloatware apps",
+  "copied_snackbar": "Logs copied to clipboard!",
+  "system_check_start": "Starting system diagnostics...",
+  "platform_web_warning": "Platform: Web. Hardware access limited by browser sandboxing.",
+  "platform_web_hint": "Tip: Build as a desktop app or run directly on a rooted Android device.",
+  "platform_android_local": "Platform: Android (running locally on device).",
+  "platform_desktop": "Platform: Computer ({os}). Connecting via ADB...",
+  "@platform_desktop": {
+    "placeholders": {
+      "os": {
+        "type": "String"
+      }
+    }
+  },
+  "platform_ios_unsupported": "OS does not support running shell commands.",
+  "knox_guard_active": "Knox & System Guard Active",
+  "knox_guard_tooltip": "Knox keys, OTA updates, and Download Mode modules are strictly protected from deletion.",
+
+  "group_korean_carriers": "Korean Carriers (SKT / KT / LGU+)",
+  "group_us_carriers": "US Carriers (T-Mobile / Verizon / AT&T)",
+  "group_korean_us_apps": "Korean & US Apps & Ads",
+  "group_korean_locales": "Korean Language Packs",
+  "group_smart_suggestions": "Smart Suggestions",
+  "group_samsung_wallet": "Samsung Wallet & Digital Key (Korean)",
+  "group_samsung_bloat": "Samsung Bloats & Utilities",
+  "group_meta_ms": "Meta & Microsoft Preloads",
+  "group_bixby": "Bixby Voice & Assistants",
+  "group_game_launcher": "Game Launcher & Services",
+  "group_samsung_services": "Samsung Services & Push",
+  "group_bluetooth_beacons": "Bluetooth Beacons & Marketing",
+  "group_telemetry": "Telemetry & Diagnostics",
+
+  "log_scanning_packages": "Scanning system packages...",
+  "log_debloat_audit": "== SYSTEM DEBLOAT AUDIT ==",
+  "log_group_clean": "  (Group is completely clean)",
+  "log_audit_summary": "== AUDIT SUMMARY ==",
+  "log_packages_removed": "  Debloated: {removed}/{total} packages removed",
+  "@log_packages_removed": {
+    "placeholders": {
+      "removed": { "type": "String" },
+      "total": { "type": "String" }
+    }
+  },
+  "log_critical_missing": "  ⚠ WARNING: Critical system packages are MISSING:",
+  "log_restore_recommended": "      - {pkg} (Restore recommended immediately)",
+  "@log_restore_recommended": {
+    "placeholders": {
+      "pkg": { "type": "String" }
+    }
+  },
+  "log_system_safety_ok": "  Core System Safety: OK (All critical packages present)",
+  "log_optimizing_settings": "== Optimizing settings ==",
+  "log_optimizing_keyboard": "== Optimizing Samsung Keyboard (Honeyboard) ==",
+  "log_restore_system_packages": "== Reinstalling original system packages ==",
+  "log_reinstalled_success": "  [OK] Reinstalled {pkg}",
+  "@log_reinstalled_success": {
+    "placeholders": {
+      "pkg": { "type": "String" }
+    }
+  },
+  "log_reinstalled_fail": "  [FAIL] Failed to restore {pkg}",
+  "@log_reinstalled_fail": {
+    "placeholders": {
+      "pkg": { "type": "String" }
+    }
+  },
+  "log_operation_halted": "OPERATION HALTED BY USER",
+  "log_all_completed": "== ALL TASKS COMPLETED ==",
+  "log_failures_count": "Number of packages with uninstall errors: {count}",
+  "@log_failures_count": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "log_installed_status": "  [INSTALLED] {pkg}",
+  "@log_installed_status": {
+    "placeholders": {
+      "pkg": { "type": "String" }
+    }
+  },
+  "log_will_remove": "  [WILL REMOVE] {pkg}",
+  "@log_will_remove": {
+    "placeholders": {
+      "pkg": { "type": "String" }
+    }
+  },
+  "log_removed_status": "  [REMOVED] {pkg}",
+  "@log_removed_status": {
+    "placeholders": {
+      "pkg": { "type": "String" }
+    }
+  },
+  "log_disabled_status": "  [DISABLED] {pkg}",
+  "@log_disabled_status": {
+    "placeholders": {
+      "pkg": { "type": "String" }
+    }
+  },
+  "log_fail_status": "  [FAIL] {pkg}: {error}",
+  "@log_fail_status": {
+    "placeholders": {
+      "pkg": { "type": "String" },
+      "error": { "type": "String" }
+    }
+  },
+  "log_will_set_locales": "  [WILL SET] system_locales = {locales}",
+  "@log_will_set_locales": {
+    "placeholders": {
+      "locales": { "type": "String" }
+    }
+  },
+  "log_will_reset_keyboard": "  [WILL RESET] Reset Samsung Keyboard input layouts",
+  "log_reset_keyboard_success": "  [RESET] Samsung Keyboard reset done",
+  "log_reset_keyboard_fail": "  [FAIL] Failed to reset Keyboard layout",
+  "log_skip_protected": "  [SKIP] {pkg} is in the core system protection list (Knox/SOS/NFC Safeguard)",
+  "@log_skip_protected": {
+    "placeholders": {
+      "pkg": { "type": "String" }
+    }
+  },
+
+  "tab_manual": "Manual",
+  "tab_presets": "Presets",
+  "search_placeholder": "Search package...",
+  "btn_load_apps": "Load Device Apps",
+  "btn_uninstall_selected": "Uninstall Checked ({count})",
+  "@btn_uninstall_selected": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "btn_disable_selected": "Disable Checked ({count})",
+  "@btn_disable_selected": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "btn_enable_selected": "Enable Checked ({count})",
+  "@btn_enable_selected": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "filter_system": "System Apps",
+  "filter_all": "All Apps",
+  "protected_badge": "Protected",
+  "log_manual_uninstall_start": "Starting manual uninstall for selected packages...",
+  "log_manual_disable_start": "Starting manual disable for selected packages...",
+  "log_manual_enable_start": "Starting manual activation for selected packages...",
+
+  "status_title_shizuku": "Connected via Shizuku",
+  "status_subtitle_shizuku": "Running locally without ROOT | Shizuku authorized",
+  "status_subtitle_shizuku_unauthorized": "Shizuku detected | Click 'Grant Shizuku' to authorize",
+  "btn_grant_shizuku": "Grant Shizuku Permission",
+  "warning_message_shizuku": "Please start the Shizuku app on your phone, or grant permission to this app to execute commands.",
+  "device_info_model_name": "Model Name",
+  "device_info_model_code": "Model Code",
+  "device_info_csc": "CSC Sales Code",
+  "device_info_carrier": "Carrier Network",
+  "device_info_connection": "Connection",
+  "btn_system_repair": "SYSTEM & KNOX RECOVERY",
+  "btn_system_repair_desc": "Restore and enable Knox, security, and carrier-specific packages (US/Korea)"
+}

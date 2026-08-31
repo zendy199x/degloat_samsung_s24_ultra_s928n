@@ -27,7 +27,7 @@ BLOAT_GROUPS: list[tuple[str, list[str]]] = [
         "com.sktelecom.smartcard.SmartcardService",  # SKT USIM Smartcard Service [xác minh ADB: không ảnh hưởng Knox/Download Mode]
         "com.skt.skaf.A000Z00040",            # ONE Store
         "com.sktelecom.minit",                # T world
-        "com.skt.skaf.OA00018282",            # ONE Store updater
+        "com.skt.skaf.OA00018282",            # ONE Store updater / carrier package manager
         "com.skt.skaf.OA00199800",            # ONE Store client
         "com.skt.skaf.popone",                # SKT PopOne
         "com.skt.skaf.l001m0000",             # SKT T-Map / T-Services
@@ -38,17 +38,25 @@ BLOAT_GROUPS: list[tuple[str, list[str]]] = [
         "com.kt.serviceagent",
         "com.kt.showpaysha",                  # KT Show Pay
         "com.kt.service.ktv8200",             # KT Service
-        "com.kt.olleh.storeclient",           # KT Olleh Store
+        "com.kt.olleh.storeclient",           # KT Olleh Store / app marketplace
         "com.kt.mhows.mobilecoupon",          # KT Mobile Coupon
         "com.kt.service.appcare",             # KT App Care
         "com.lguplus.lgugpsnwps",
         "com.lguplus.payon",                  # LG U+ Pay
         "com.lguplus.callguard",              # LG U+ Chặn cuộc gọi Hàn
         "com.lguplus.mobilephonecertificate", # LG U+ Chứng thư di động
-        "com.lguplus.appstore",               # LG U+ App Store
+        "com.lguplus.appstore",               # LG U+ App Store / carrier app store
         "com.lguplus.navi",                   # LG U+ Navigation
         "com.lguplus.mobile.cs",              # LG U+ Customer Service
         "com.lguplus.tsmproxy",               # LG U+ TSM Proxy
+    ]),
+    ("Chặn cài đặt tự động từ nhà mạng", [
+        "com.skt.skaf.OA00018282",            # SKT app updater / carrier auto-installer
+        "com.skt.skaf.OA00199800",            # SKT app marketplace client / auto suggested install
+        "com.skt.skaf.popone",                # SKT PopOne / carrier push install path
+        "com.kt.olleh.storeclient",           # KT app store / auto install source
+        "com.lguplus.appstore",               # LG U+ app store / auto install source
+        "com.samsung.android.app.merchant",   # nếu có trên rom này, là source merchant app install
     ]),
     ("App riêng máy Hàn & Quảng cáo vị trí", [
         "com.tms",                            # SKTMemberShip_new.apk
@@ -69,11 +77,18 @@ BLOAT_GROUPS: list[tuple[str, list[str]]] = [
         "com.samsung.android.offline.langpack.ko_kr", # Gói dịch ngoại tuyến Galaxy AI tiếng Hàn
         "com.samsung.android.sdk.handwriting.ko_KR", # Nhận diện viết tay tiếng Hàn
     ]),
-    ("Now Brief & Gợi ý thông minh (Smart Suggestions)", [
+    ("Now Brief & Gợi ý thông minh / Global Goals", [
+        "com.samsung.android.app.tips",              # Samsung Tips / Gợi ý thông minh (đã xác minh trên máy thật)
         "com.samsung.android.smartsuggestions",      # Smart Suggestions / Now Brief
+        "com.samsung.android.globalgoals",          # Samsung Global Goals / hoạt động mục tiêu toàn cầu
+        "com.samsung.android.galaxyglobalgoals",    # Một biến thể khác của Global Goals trên Galaxy
+        "com.samsung.android.app.globalgoals",      # Global Goals app preload
+        "com.samsung.sree",                          # Global Goals / Samsung SREE alias trên S24 Ultra
+        "com.samsung.android.globalpostprocmgr",    # Global Post Processing Manager (service liên quan)
     ]),
     ("Samsung Wallet & Digital Key (bản Hàn)", [
         "com.samsung.android.spay",                  # Samsung Wallet / Samsung Pay
+        "com.sktelecom.tauth",                       # PASS / SK Telecom auth app
         "com.samsung.android.samsungpass",           # Samsung Pass
         "com.samsung.android.samsungpassautofill",   # Samsung Pass Autofill
         "com.samsung.android.coldwalletservice",     # Samsung Cold Wallet
@@ -94,8 +109,33 @@ BLOAT_GROUPS: list[tuple[str, list[str]]] = [
         "com.sec.android.app.kidshome",              # Samsung Kids Home
         "com.samsung.android.stubs.wearable",        # Wearable Stub Installer
         "com.samsung.android.app.watchmanagerstub",  # Watch Manager Stub Installer
+        "com.samsung.android.app.watchmanager",      # Samsung Wearable Manager
+        "com.samsung.android.app.watchmanager3",     # Samsung Wearable Manager v3
+        "com.samsung.android.app.shealth",           # Samsung Health
+        "com.sec.android.app.shealth",               # Samsung Health (các phiên bản khác)
+        "com.samsung.android.oneconnect",            # SmartThings
+        "com.samsung.android.smartswitchassistant",  # Smart Switch
+        "com.sec.android.easyMover",                 # Smart Switch / Data Transfer
+        "com.sec.android.easyMover.TargetApp",       # Smart Switch target app
+        "com.samsung.android.app.simplesharing",     # Smart Share / Link Sharing
         "com.samsung.android.freshtracks",           # Samsung Music Discovery
         "com.samsung.android.stubs.tns",             # Samsung News Stub
+        "com.android.chrome",                        # Google Chrome
+        "com.google.android.gm",                     # Gmail
+        "com.google.android.apps.maps",              # Google Maps
+        "com.google.android.apps.meetings",          # Google Meet
+        "com.google.android.apps.tachyon",           # Google Meet / Meet app alias
+        "com.google.android.apps.docs",              # Google Drive
+        "com.google.android.apps.docs.editors.docs", # Google Docs
+        "com.google.android.apps.docs.editors.sheets", # Google Sheets
+        "com.google.android.apps.docs.editors.slides", # Google Slides
+        "com.google.android.apps.photos",            # Google Photos
+        "com.google.android.youtube",                # YouTube
+        "com.google.android.apps.youtube.music",     # YouTube Music
+        "com.google.android.googlequicksearchbox",   # Google app / search sandbox
+        "com.google.android.apps.bard",              # Gemini
+        "com.google.android.apps.gemini",            # Gemini
+        "com.elevenst",                             # 11Street (Hàn Quốc) – tên thực tế sẽ được kiểm tra bằng ADB nếu tồn tại
     ]),
     ("Dịch vụ Meta & Microsoft cài sẵn", [
         "com.facebook.appmanager",                   # Facebook App Manager

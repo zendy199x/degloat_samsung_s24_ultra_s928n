@@ -57,6 +57,7 @@ BLOAT_GROUPS: list[tuple[str, list[str]]] = [
         "com.kt.olleh.storeclient",           # KT app store / auto install source
         "com.lguplus.appstore",               # LG U+ app store / auto install source
         "com.samsung.android.app.merchant",   # nếu có trên rom này, là source merchant app install
+        "com.elevenst",                             # 11Street (Hàn Quốc) – tên thực tế sẽ được kiểm tra bằng ADB nếu tồn tại
     ]),
     ("App riêng máy Hàn & Quảng cáo vị trí", [
         "com.tms",                            # SKTMemberShip_new.apk
@@ -77,7 +78,7 @@ BLOAT_GROUPS: list[tuple[str, list[str]]] = [
         "com.samsung.android.offline.langpack.ko_kr", # Gói dịch ngoại tuyến Galaxy AI tiếng Hàn
         "com.samsung.android.sdk.handwriting.ko_KR", # Nhận diện viết tay tiếng Hàn
     ]),
-    ("Now Brief & Gợi ý thông minh / Global Goals", [
+    ("Gợi ý thông minh / Global Goals", [
         "com.samsung.android.app.tips",              # Samsung Tips / Gợi ý thông minh (đã xác minh trên máy thật)
         "com.samsung.android.smartsuggestions",      # Smart Suggestions / Now Brief
         "com.samsung.android.globalgoals",          # Samsung Global Goals / hoạt động mục tiêu toàn cầu
@@ -89,8 +90,6 @@ BLOAT_GROUPS: list[tuple[str, list[str]]] = [
     ("Samsung Wallet & Digital Key (bản Hàn)", [
         "com.samsung.android.spay",                  # Samsung Wallet / Samsung Pay
         "com.sktelecom.tauth",                       # PASS / SK Telecom auth app
-        "com.samsung.android.samsungpass",           # Samsung Pass
-        "com.samsung.android.samsungpassautofill",   # Samsung Pass Autofill
         "com.samsung.android.coldwalletservice",     # Samsung Cold Wallet
         "com.samsung.android.dkey",                  # Samsung Wallet Digital Key
         "com.samsung.android.carkey",                # Samsung Wallet Car Key
@@ -98,44 +97,7 @@ BLOAT_GROUPS: list[tuple[str, list[str]]] = [
     ]),
     ("App Samsung rác & Tính năng phụ", [
         "com.samsung.android.tvplus",                # Samsung TV Plus
-        "com.samsung.android.app.spage",             # Samsung Free / Samsung News tab / Briefing
         "com.samsung.android.glance.gpp",            # Glance (Quảng cáo màn hình khóa)
-        "com.sec.android.app.billing",               # Samsung In-App Purchase
-        "com.samsung.android.arzone",                # AR Zone
-        "com.samsung.android.aremoji",               # AR Emoji
-        "com.samsung.android.aremojieditor",         # AR Emoji Editor
-        "com.samsung.android.ar.sticker",            # AR Emoji Stickers
-        "com.samsung.android.kidsinstaller",         # Samsung Kids Installer
-        "com.sec.android.app.kidshome",              # Samsung Kids Home
-        "com.samsung.android.stubs.wearable",        # Wearable Stub Installer
-        "com.samsung.android.app.watchmanagerstub",  # Watch Manager Stub Installer
-        "com.samsung.android.app.watchmanager",      # Samsung Wearable Manager
-        "com.samsung.android.app.watchmanager3",     # Samsung Wearable Manager v3
-        "com.samsung.android.app.shealth",           # Samsung Health
-        "com.sec.android.app.shealth",               # Samsung Health (các phiên bản khác)
-        "com.samsung.android.oneconnect",            # SmartThings
-        "com.samsung.android.smartswitchassistant",  # Smart Switch
-        "com.sec.android.easyMover",                 # Smart Switch / Data Transfer
-        "com.sec.android.easyMover.TargetApp",       # Smart Switch target app
-        "com.samsung.android.app.simplesharing",     # Smart Share / Link Sharing
-        "com.samsung.android.freshtracks",           # Samsung Music Discovery
-        "com.samsung.android.stubs.tns",             # Samsung News Stub
-        "com.android.chrome",                        # Google Chrome
-        "com.google.android.gm",                     # Gmail
-        "com.google.android.apps.maps",              # Google Maps
-        "com.google.android.apps.meetings",          # Google Meet
-        "com.google.android.apps.tachyon",           # Google Meet / Meet app alias
-        "com.google.android.apps.docs",              # Google Drive
-        "com.google.android.apps.docs.editors.docs", # Google Docs
-        "com.google.android.apps.docs.editors.sheets", # Google Sheets
-        "com.google.android.apps.docs.editors.slides", # Google Slides
-        "com.google.android.apps.photos",            # Google Photos
-        "com.google.android.youtube",                # YouTube
-        "com.google.android.apps.youtube.music",     # YouTube Music
-        "com.google.android.googlequicksearchbox",   # Google app / search sandbox
-        "com.google.android.apps.bard",              # Gemini
-        "com.google.android.apps.gemini",            # Gemini
-        "com.elevenst",                             # 11Street (Hàn Quốc) – tên thực tế sẽ được kiểm tra bằng ADB nếu tồn tại
     ]),
     ("Dịch vụ Meta & Microsoft cài sẵn", [
         "com.facebook.appmanager",                   # Facebook App Manager
@@ -146,30 +108,6 @@ BLOAT_GROUPS: list[tuple[str, list[str]]] = [
         "com.microsoft.office.outlook",              # Outlook Preload
         "com.microsoft.appmanager",                  # Link to Windows
         "com.linkedin.android",                      # LinkedIn
-        "com.google.android.videos",                 # Google TV
-    ]),
-    ("Bixby Voice & Trợ lý ảo", [
-        "com.samsung.android.bixby.agent",           # Trợ lý Bixby Voice
-        "com.samsung.android.bixby.wakeup",          # Nhận diện giọng nói "Hi Bixby"
-        "com.samsung.android.bixby.service",         # Bixby Service
-        "com.samsung.android.bixbyvision.framework", # Bixby Vision Framework
-        "com.samsung.android.visionintelligence",    # Bixby Vision Intelligence
-        "com.samsung.android.bixby.ondevice.enus",   # Bixby On-Device tiếng Anh
-    ]),
-    ("Game Launcher rác", [
-        "com.samsung.android.game.gamehome",         # Game Launcher / Game Hub
-        "com.enhance.gameservice",                   # Game Service
-    ]),
-    ("Dịch vụ Samsung phụ & Liên kết ngầm", [
-        "com.samsung.android.app.reminder",          # Samsung Reminder
-        "com.samsung.android.smartswitchassistant",  # Smart Switch Assistant Hàn
-        "com.samsung.android.voc",                   # Samsung Members Hàn
-        "com.samsung.petservice",                    # Pet Service
-        "com.samsung.storyservice",                  # Story Service
-        "com.sec.spp.push",                          # Samsung Push Service
-        "com.samsung.android.easysetup",             # Easy Setup
-        "com.samsung.android.app.dressroom",         # Samsung Dressroom
-        "com.samsung.gpuwatchapp",                   # GPU Watch
     ]),
     ("Dịch vụ quảng cáo Bluetooth Beacon & Định vị ngầm", [
         "com.samsung.android.beaconmanager",         # Samsung Beacon Manager
@@ -278,6 +216,20 @@ def installed_packages() -> set[str]:
     return all_pkgs - disabled_pkgs
 
 
+def user_installed_packages() -> set[str]:
+    all_pkgs = {
+        l.removeprefix("package:").strip()
+        for l in shell("pm list packages -3").splitlines()
+        if l.startswith("package:")
+    }
+    disabled_pkgs = {
+        l.removeprefix("package:").strip()
+        for l in shell("pm list packages -d -3").splitlines()
+        if l.startswith("package:")
+    }
+    return all_pkgs - disabled_pkgs
+
+
 def all_bloat() -> list[str]:
     return [pkg for _, packages in BLOAT_GROUPS for pkg in packages]
 
@@ -343,6 +295,35 @@ def remove_bloat(dry_run: bool) -> int:
                 else:
                     failures += 1
                     print(f"  [LỖI    ] {pkg}: {result or disable_res or 'không rõ nguyên nhân'}")
+    return failures
+
+
+def remove_all_user_apps(dry_run: bool) -> int:
+    present = user_installed_packages()
+    failures = 0
+
+    print("\n== XÓA TẤT CẢ APP NGƯỜI DÙNG (không bảo vệ) ==")
+    for pkg in sorted(present):
+        if pkg in PROTECTED:
+            print(f"  [BỎ QUA ] {pkg} (bảo vệ hệ thống)")
+            continue
+
+        if dry_run:
+            print(f"  [sẽ gỡ  ] {pkg}")
+            continue
+
+        result = shell(f'pm uninstall --user 0 "{pkg}"')
+        if "Success" in result or "not installed" in result.lower():
+            print(f"  [đã gỡ  ] {pkg}")
+            continue
+
+        disable_res = shell(f'pm disable-user --user 0 "{pkg}"')
+        if "disabled" in disable_res.lower() or "new state" in disable_res.lower():
+            print(f"  [tắt app] {pkg} (hard disable)")
+        else:
+            failures += 1
+            print(f"  [LỖI    ] {pkg}: {result or disable_res or 'không rõ nguyên nhân'}")
+
     return failures
 
 
@@ -425,6 +406,11 @@ def main() -> int:
     mode.add_argument("--verify", action="store_true", help="chỉ kiểm tra, không thay đổi gì")
     mode.add_argument("--dry-run", action="store_true", help="xem trước việc sẽ làm")
     mode.add_argument("--restore", action="store_true", help="cài lại mọi gói đã gỡ")
+    mode.add_argument(
+        "--all-user-apps",
+        action="store_true",
+        help="gỡ tất cả app người dùng không bảo vệ (hard disable) để chặn app quay lại",
+    )
     parser.add_argument(
         "--keep-keyboard",
         action="store_true",
@@ -454,6 +440,15 @@ def main() -> int:
             restore_bloat(args.dry_run)
             print_summary()
             return 0
+
+        if args.all_user_apps:
+            failures = remove_all_user_apps(args.dry_run)
+            apply_settings(args.dry_run)
+            if not args.keep_keyboard:
+                reset_keyboard(args.dry_run)
+            if not args.dry_run:
+                print_summary()
+            return 1 if failures else 0
 
         failures = remove_bloat(args.dry_run)
         apply_settings(args.dry_run)
